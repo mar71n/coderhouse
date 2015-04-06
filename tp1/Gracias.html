@@ -3,13 +3,17 @@
     <head>
         <title>TP1</title>
         <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css">
+
     </head>
-    <body>
+    <body >
+    <div class="ui-state-default ui-widget">
     gracias : 
     <script>
         var parametros = window.location.search.replace('?','').split('&');
         var nombre = parametros[0].split('=')[1];
         document.write(nombre);
     </script>
+    </div>
     </body>
 </html>

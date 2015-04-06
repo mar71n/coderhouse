@@ -5,17 +5,38 @@
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css">
     </head>
-    <body>
+    <body class="ui-state-default ui-widget">
         <form action="Gracias.html">
-            Nombre:<br>
-            <input type="text" name="nombre" class="ui-corner-all" required autofocus>
+            <div id="respondente">
+                Nombre:<br>
+                <input type="text" name="nombre" class="ui-corner-all ui-button" required autofocus>
+                <br>
+                Apellido:<br>
+                <input type="text" name="apellido" class="ui-corner-all ui-button" required>
+            </div>
             <br>
-            Apellido:<br>
-            <input type="text" name="apellido" class="ui-corner-all" required>
+            Seleccione una opcion:<br>
+            <div id="radio" class="ui-button">
+                <input type="radio" id="radio1" name="radio" value=1 required><label for="radio1">Opcion 1</label>
+                <input type="radio" id="radio2" name="radio" value=2 required><label for="radio2">Opcion 2</label>
+                <input type="radio" id="radio3" name="radio" value=3 required><label for="radio3">Opcion 3</label>
+            </div>
             <br><br>
-            <input type="submit" value="Submit">
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+            <div>
+                <input type="reset" value="Limpiar">
+            </div>
         </form>
         <script src="jquery.js"></script>
         <script src="jquery-ui/jquery-ui.js"></script>
+        <script>
+            $(function() {
+                $( "#radio" ).buttonset();
+                $( "input[type=submit], a, button" ).button();
+                $( "input[type=reset], a, button" ).button();
+            });
+        </script>
     </body>
 </html>
