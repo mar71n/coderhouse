@@ -4,9 +4,15 @@
         <title>TP1</title>
         <meta charset="utf-8"/>
         <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css">
+        <style>
+        body{
+            width: 600px;
+        }
+        </style>
     </head>
     <body class="ui-state-default ui-widget">
         <form action="Gracias.html">
+            <fieldset><legend>Datos del respondente:</legend>
             <div id="respondente">
                 Nombre:<br>
                 <input type="text" name="nombre" class="ui-corner-all ui-button" required autofocus>
@@ -14,13 +20,45 @@
                 Apellido:<br>
                 <input type="text" name="apellido" class="ui-corner-all ui-button" required>
             </div>
-            <br>
+            </fieldset>
+            <fieldset><legend>Opciones:</legend>
             Seleccione una opcion:<br>
             <div id="radio" class="ui-button">
                 <input type="radio" id="radio1" name="radio" value=1 required><label for="radio1">Opcion 1</label>
                 <input type="radio" id="radio2" name="radio" value=2 required><label for="radio2">Opcion 2</label>
                 <input type="radio" id="radio3" name="radio" value=3 required><label for="radio3">Opcion 3</label>
             </div>
+            </fieldset>
+            <fieldset><legend>Opciones multiples:</legend>
+            Seleccione una o mas opcion:<br>
+            <div id="checkbox" class="ui-button">
+                <input type="checkbox" id="checkbox1" name="checkbox" value=1><label for="checkbox1">Opcion A</label>
+                <input type="checkbox" id="checkbox2" name="checkbox" value=2><label for="checkbox2">Opcion B</label>
+                <input type="checkbox" id="checkbox3" name="checkbox" value=3><label for="checkbox3">Opcion C</label>
+            </div>
+            </fieldset>
+            <fieldset><legend>Seleccionde una de la lista:</legend>
+            <div id="select">
+            <select name="seleccion" required>
+                <option value="" disabled selected>seleccione...</option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select>
+            </div>
+            </fieldset>
+            <fieldset><legend>Seleccionde algunos de la lista:</legend>
+            <div id="mselect">
+            <select name="mseleccion" multiple size=5 required>
+                <option value="" disabled selected>seleccione...</option>
+                <option value="volvo">Volvo</option>
+                <option value="saab">Saab</option>
+                <option value="mercedes">Mercedes</option>
+                <option value="audi">Audi</option>
+            </select> 
+            </div>
+            </fieldset>
             <br><br>
             <div>
                 <input type="submit" value="Submit">
@@ -36,6 +74,7 @@
                 $( "#radio" ).buttonset();
                 $( "input[type=submit], a, button" ).button();
                 $( "input[type=reset], a, button" ).button();
+                $( "input[type=checkbox], a, button" ).button();
             });
         </script>
     </body>
