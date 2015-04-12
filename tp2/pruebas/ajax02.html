@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+function loadXMLDoc(nombreArchivo)
+{
+var retval="nada";
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    retval = xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET",nombreArchivo,false);
+xmlhttp.send();
+return retval;
+}
+
+function poner_select(nombre, data){
+    document.write("<select name='" + nombre + "'>");
+    largo = data.length;
+    for (j=0; j<largo; j++){
+        document.write("<option value='" + data[j] + "'>" + data[j] + "</option>");
+    }
+    document.write("</select>");
+}
+
+</script>
+</head>
+<body>
+<h3>Cargo el select desde un archivo, via Ajax. Solo html (sin PHP)</h3>
+<script>
+    var txt_provincias = loadXMLDoc("ajax02.txt");
+    var provincias = txt_provincias.split(",");
+    poner_select("provincias", provincias);
+</script>
+</body>
+</html>
