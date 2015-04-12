@@ -22,8 +22,10 @@ xmlhttp.onreadystatechange=function()
     var txt_provincias = xmlhttp.responseText;
     var provincias = txt_provincias.split(",");
     poner_select("provincias", provincias);
+    document.getElementById("esperando").style.display = "none";
     }
   }
+document.getElementById("esperando").style.display = "block";
 xmlhttp.open("GET","ajax02.txt",true);
 xmlhttp.send();
 }
@@ -41,12 +43,12 @@ function poner_select(nombre, data){
 
 </script>
 </head>
-<body>
+<body  onload="loadXMLDoc()">
 <h3>Cargo el select desde un archivo, via Ajax. Solo html (sin PHP)</h3>
 <div id="provincias">
 </div>
-<script>
-loadXMLDoc();
-</script>
+<div id="esperando" style="display:none">
+    Cargando
+</div>
 </body>
 </html>
