@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+    <head>
+        <title>TP1</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css">
+        <style>
+        body{
+            width: 600px;
+        }
+        .brm{
+            float: right;
+        }
+        </style>
+    </head>
+    <body class="ui-state-default ui-widget"  onload="loadXMLDoc()">
+    <h2>Encuesta sobre transporte público</h2>
+        <form action="Gracias.html">
+            <fieldset><legend>Ubicación Geográfica</legend>
+                <div id="ug">
+                    <div id="provincias">
+                    </div>
+                    <div id="localidades">
+                        <select>
+                            <option value="seleccione">seleccione...</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset><legend>Datos del respondente:</legend>
+            <div id="respondente">
+                Nombre:<br>
+                <input type="text" name="nombre" class="ui-corner-all ui-button" required autofocus>
+                <br>
+                Apellido:<br>
+                <input type="text" name="apellido" class="ui-corner-all ui-button" required>
+                <br>Sexo: 
+                <div id="sexo" class="ui-button">
+                    <input type="radio" id="varon" name="sexo" value=1 required><label for="varon">Varon</label>
+                    <input type="radio" id="mujer" name="sexo" value=2 required><label for="mujer">Mujer</label>
+                </div>
+            </div>
+            </fieldset>
+            <fieldset><legend>Transporte utilizado:</legend>
+                Que medio/s de transporte público utiliza:<br>
+                <div id="transporte" >
+                    <input type="checkbox" id="colectivo" name="transporte" value=1><label for="colectivo">Colectivo</label>
+                    <input type="checkbox" id="subte"     name="transporte" value=2><label for="subte">Subterraneo</label>
+                    <input type="checkbox" id="tren"      name="transporte" value=3><label for="tren">Tren</label>
+                    <input type="checkbox" id="taxi"      name="transporte" value=4><label for="taxi">Taxi</label>
+                </div>
+            </fieldset>
+            <fieldset><legend>Valoracion del Subterraneo:</legend>
+                Seleccione una valoracion para cada  categoria:<br>
+                Por precio:
+                <div id="precio" class="ui-button brm">
+                    <input type="radio" id="precio1" name="precio" value=1 required><label for="precio1">Bueno</label>
+                    <input type="radio" id="precio2" name="precio" value=2 required><label for="precio2">Regular</label>
+                    <input type="radio" id="precio3" name="precio" value=3 required><label for="precio3">Malo</label>
+                </div>
+                <br><br>
+                Por rapides:
+                <div id="velocidad" class="ui-button brm">
+                    <input type="radio" id="velocidad1" name="velocidad" value=1 required><label for="velocidad1">Bueno</label>
+                    <input type="radio" id="velocidad2" name="velocidad" value=2 required><label for="velocidad2">Regular</label>
+                    <input type="radio" id="velocidad3" name="velocidad" value=3 required><label for="velocidad3">Malo</label>
+                </div>
+            </fieldset>
+            <fieldset><legend>Lineas de Subterraneo mas utilizadas:</legend>
+                Seleccione una o mas:<br>
+                <select name="lineaSubte" multiple size=4>
+                        <option value="" disabled selected>Subte...</option>		
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="D">D</option>
+                        <option value="E">E</option>
+                        <option value="H">H</option>
+                        <option value="P">P</option>			
+                </select>
+            </fieldset>
+            <fieldset><legend>Linea de Tren mas utilizada:</legend>
+                seleccione una:
+                <select name="lineaTren" >
+                        <option value="" disabled selected>Tren...</option>	
+                        <option value="roca">Roca</option>
+                        <option value="sarmiento">Sarmiento</option>
+                        <option value="san-martin">San Martin</option>
+                        <option value="urquiza">Urquiza</option>
+                        <option value="mitre">Mitre</option>
+                        <option value="de-la-costa">de la Costa</option>
+                        <option value="belgrano-norte">Belgrano N</option>
+                        <option value="belgrano-sur">Belgrano S</option>
+                </select>
+            </fieldset>
+            <fieldset><legend>Desde que zona viaja:</legend>
+                Seleccione una o mas:<br>
+                <div id="zona" >
+                    <input type="checkbox" id="centro" name="zona" value=1><label for="centro">Centro</label>
+                    <input type="checkbox" id="sur"    name="zona" value=2><label for="sur">Sur</label>
+                    <input type="checkbox" id="oeste"  name="zona" value=3><label for="oeste">Oeste</label>
+                    <input type="checkbox" id="norte"  name="zona" value=4><label for="norte">Norte</label>
+                </div>
+            </fieldset>
+            <br><br>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+            <div>
+                <input type="reset" value="Limpiar">
+            </div>
+        </form>
+        <script src="jquery-ui/external/jquery/jquery.js"></script>
+        <script src="jquery-ui/jquery-ui.js"></script>
+        <script src="tp2.js"></script>
+        <script>
+            $(function() {
+                $( "#sexo" ).buttonset();
+                $( "#transporte input[type=checkbox]" ).button();
+                $( "#precio" ).buttonset();
+                $( "#velocidad" ).buttonset();
+                $( "#zona input[type=checkbox]" ).button();
+                $( "input[type=submit], a, button" ).button();
+                $( "input[type=reset], a, button" ).button();
+            });
+        </script>
+    </body>
+</html>
