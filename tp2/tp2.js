@@ -79,7 +79,7 @@ xmlhttp.send();
 }
 
 function poner_select(nombre, data, donde){
-    var txt_select ="<select name='" + nombre + "'>";
+    var txt_select ="<select name='" + nombre + "' class='form-control'>";
     largo = data.length;
     for (j=0; j<largo; j++){
         txt_select += "<option value='" + data[j] + "'>" + data[j] + "</option>";
