@@ -3,10 +3,11 @@
     <head>
         <title>TP1</title>
         <meta charset="utf-8"/>
+        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
         <link rel="stylesheet" type="text/css" href="jquery-ui/jquery-ui.css">
         <style>
         body{
-            width: 600px;
+            max-width: 600px;
         }
         .brm{
             float: right;
@@ -26,7 +27,7 @@
                                  <img src="imagenes/ajax-loader.gif">
                              </div>
                     <div id="localidades">
-                        <select>
+                        <select class="form-control">
                             <option value="seleccione">seleccione...</option>
                         </select>
                     </div>
@@ -35,14 +36,14 @@
             <fieldset><legend>Datos del respondente:</legend>
             <div id="respondente">
                 Nombre:<br>
-                <input type="text" name="nombre" class="ui-corner-all ui-button" required autofocus>
+                <input type="text" name="nombre" class="ui-corner-all ui-button form-control " required autofocus>
                 <br>
                 Apellido:<br>
-                <input type="text" name="apellido" class="ui-corner-all ui-button" required>
+                <input type="text" name="apellido" class="ui-corner-all ui-button form-control" required>
                 <br>Sexo: 
                 <div id="sexo" class="ui-button">
-                    <input type="radio" id="varon" name="sexo" value=1 required><label for="varon">Varon</label>
-                    <input type="radio" id="mujer" name="sexo" value=2 required><label for="mujer">Mujer</label>
+                    <input type="radio" id="varon" name="sexo" value=1 class="form-control" required><label for="varon">Varon</label>
+                    <input type="radio" id="mujer" name="sexo" value=2 class="form-control" required><label for="mujer">Mujer</label>
                 </div>
             </div>
             </fieldset>
@@ -57,23 +58,29 @@
             </fieldset>
             <fieldset><legend>Valoracion del Subterraneo:</legend>
                 Seleccione una valoracion para cada  categoria:<br>
+                <div class="row">
+                <div class="col-md-2">
                 Por precio:
-                <div id="precio" class="ui-button brm">
-                    <input type="radio" id="precio1" name="precio" value=1 required><label for="precio1">Bueno</label>
-                    <input type="radio" id="precio2" name="precio" value=2 required><label for="precio2">Regular</label>
-                    <input type="radio" id="precio3" name="precio" value=3 required><label for="precio3">Malo</label>
+                </div>
+                <div id="precio" class="ui-button ">
+                    <input type="radio" id="precio1" name="precio" value=1 class="col-md-1" required><label for="precio1">Bueno</label>
+                    <input type="radio" id="precio2" name="precio" value=2 class="col-md-1" required><label for="precio2">Regular</label>
+                    <input type="radio" id="precio3" name="precio" value=3 class="col-md-1" required><label for="precio3">Malo</label>
                 </div>
                 <br><br>
+                <div class="col-md-2">
                 Por rapides:
-                <div id="velocidad" class="ui-button brm">
-                    <input type="radio" id="velocidad1" name="velocidad" value=1 required><label for="velocidad1">Bueno</label>
-                    <input type="radio" id="velocidad2" name="velocidad" value=2 required><label for="velocidad2">Regular</label>
-                    <input type="radio" id="velocidad3" name="velocidad" value=3 required><label for="velocidad3">Malo</label>
+                </div>
+                <div id="velocidad" class="ui-button ">
+                    <input type="radio" id="velocidad1" name="velocidad" value=1 class="col-md-1" required><label for="velocidad1">Bueno</label>
+                    <input type="radio" id="velocidad2" name="velocidad" value=2 class="col-md-1" required><label for="velocidad2">Regular</label>
+                    <input type="radio" id="velocidad3" name="velocidad" value=3 class="col-md-1" required><label for="velocidad3">Malo</label>
+                </div>
                 </div>
             </fieldset>
             <fieldset><legend>Lineas de Subterraneo mas utilizadas:</legend>
                 Seleccione una o mas:<br>
-                <select name="lineaSubte" multiple size=4>
+                <select name="lineaSubte" multiple size=4 class="form-control">
                         <option value="" disabled selected>Subte...</option>		
                         <option value="A">A</option>
                         <option value="B">B</option>
@@ -86,7 +93,7 @@
             </fieldset>
             <fieldset><legend>Linea de Tren mas utilizada:</legend>
                 seleccione una:
-                <select name="lineaTren" >
+                <select name="lineaTren" class="form-control">
                         <option value="" disabled selected>Tren...</option>	
                         <option value="roca">Roca</option>
                         <option value="sarmiento">Sarmiento</option>
