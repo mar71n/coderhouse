@@ -72,10 +72,8 @@ xmlhttp.onreadystatechange=function()
     {
     var json_localidades = xmlhttp.responseText;
     poner_select("localidades", eval(json_localidades), "localidades");
-    //document.getElementById("esperando").style.display = "none";
     }
   }
-//document.getElementById("esperando").style.display = "block";
 xmlhttp.open("GET","localidades.php?param_prov=" + provincia,true);
 xmlhttp.send();
 }
@@ -92,6 +90,7 @@ function poner_select(nombre, data, donde){
 
 function crear_localidades(){
     var provincia = document.getElementsByName("provincias")[0].value;
-    //console.log("crear localidades " + provincia);
+    document.getElementById("esperando").style.display="inline";
     loadXMLDoc_localidades(provincia);
+    setTimeout(function(){document.getElementById("esperando").style.display="none";},200);
 }
