@@ -6,7 +6,7 @@ Ejercicios curso javascript en coderhouse
 ANT lo descargo de 
 [http://ant.apache.org/index.html]
 
-SDK lo tengo en 
+SDK lo tengo en:
 
 `C:\Program Files (x86)\Android\android-sdk\platform-tools\`
 
