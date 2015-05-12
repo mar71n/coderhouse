@@ -3,6 +3,9 @@ Ejercicios curso javascript en coderhouse
 
 [https://coderhouse-gba.slack.com/]
 
+Los drivers del Samsung
+[http://www.samsung.com/ar/support/usefulsoftware/KIES/]
+
 ANT lo descargo de 
 [http://ant.apache.org/index.html]
 
