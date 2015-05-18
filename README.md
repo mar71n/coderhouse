@@ -52,6 +52,6 @@ WARNING: org.apache.cordova.device has been renamed to cordova-plugin-device.
 
 ```
 #phonegap plugin list
+cordova-plugin-device 1.0.0 "Device"
 cordova-plugin-whitelist 1.0.0 "Whitelist"
-org.apache.cordova.device 0.3.0 "Device"
 ```
