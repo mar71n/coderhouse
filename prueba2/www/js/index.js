@@ -34,6 +34,12 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        $('#boton1').on('click', function(){
+            navigator.vibrate(1000);
+        });
+        $('#boton2').on('click', function(){
+            navigator.vibrate([50,500,1000]);
+        });
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
