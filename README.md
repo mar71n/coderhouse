@@ -28,6 +28,14 @@ Esto me permite habilitar depuración USB, etc sin mas.
 ####Habilitar depuracion por USB####
 `Ajustes -> Opciones de desarrollador -> Depuración de USB`
 
+####Ver que devices hay conectadas
+```
+$ adb devices
+List of devices attached
+emulator-5554   device
+4204d898d6b05100        device
+```
+
 ##Versión de Android##
 Como quiereo que compile para mi Android 4.1.2, una vez creada la aplicacion en `\[nombreApp]\config.xml` agregar estas lineas
 ```
