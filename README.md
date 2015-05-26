@@ -28,6 +28,17 @@ Esto me permite habilitar depuración USB, etc sin mas.
 ####Habilitar depuracion por USB####
 `Ajustes -> Opciones de desarrollador -> Depuración de USB`
 
+## Reinstalar phonegap y cordova con las versiones indicadas
+####desinstalar las versiones actuales:####
+`$npm uninstall -g phonegap cordova`
+####instalar la versión testeadas:####
+```
+>npm install phonegap@4.2.0-0.26.0
+>npm install cordova@4.3.0
+```
+Después te pide instalar la API 19 con el sdk manager.
+Alcanza con instalar **SDK Platform**
+
 ####Ver que devices hay conectadas
 ```
 $ adb devices
