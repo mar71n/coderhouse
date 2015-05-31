@@ -40,6 +40,16 @@ var app = {
         var parentElement = document.getElementById(id);
         var listeningElement = parentElement.querySelector('.listening');
         var receivedElement = parentElement.querySelector('.received');
+        document.getElementById('mostrar').innerText += '\n device.cordova: ';
+        document.getElementById('mostrar').innerText += device.cordova;
+        document.getElementById('mostrar').innerText += '\n device.model: ';
+        document.getElementById('mostrar').innerText += device.model;
+        document.getElementById('mostrar').innerText += '\n device.platform: ';
+        document.getElementById('mostrar').innerText += device.platform;
+        document.getElementById('mostrar').innerText += '\n device.uuid: ';
+        document.getElementById('mostrar').innerText += device.uuid;
+        document.getElementById('mostrar').innerText += '\n device.version: ';
+        document.getElementById('mostrar').innerText += device.version;
 
         listeningElement.setAttribute('style', 'display:none;');
         receivedElement.setAttribute('style', 'display:block;');
