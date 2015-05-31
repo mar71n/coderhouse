@@ -39,6 +39,9 @@ Esto me permite habilitar depuración USB, etc sin mas.
 Después te pide instalar la API 19 con el sdk manager.
 Alcanza con instalar **SDK Platform**
 
+Uso el **AVD** (Android Virtual Device / emulador)
+`Nexus One, con Android 4.1.2`
+
 ####Ver que devices hay conectadas
 ```
 $ adb devices
@@ -74,3 +77,4 @@ WARNING: org.apache.cordova.device has been renamed to cordova-plugin-device.
 cordova-plugin-device 1.0.0 "Device"
 cordova-plugin-whitelist 1.0.0 "Whitelist"
 ```
+
