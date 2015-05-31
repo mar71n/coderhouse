@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.coderhouse.prueba2" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>00 Prueba 2</name>
+<widget id="com.coderhouse.prueba2" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>Bootstrap y vibration</name>
     <description>
-        Hello World sample application that responds to the deviceready event.
+        Bootstrap y vibration
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
@@ -21,9 +21,7 @@
     <preference name="show-splash-screen-spinner" value="true" />
     <preference name="auto-hide-splash-screen" value="true" />
     <preference name="disable-cursor" value="false" />
-    <preference name="android-minSdkVersion" value="16" />
-    <preference name="android-maxSdkVersion" value="16" />
-    <preference name="android-targetSdkVersion" value="16" />
+    <preference name="android-minSdkVersion" value="7" />
     <preference name="android-installLocation" value="auto" />
     <gap:plugin name="org.apache.cordova.battery-status" />
     <gap:plugin name="org.apache.cordova.camera" />
