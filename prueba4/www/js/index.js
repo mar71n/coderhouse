@@ -1,0 +1,6 @@
+var app = {
+    //...
+    //...,
+    initialize: function(){
+    },
+}
