@@ -9,7 +9,8 @@ var app = {
         // Manejar el evento
         //document.getElementById("mensage").
         // alert("Carga: " + evt.level + "%; Enchufado: " + evt.isPlugged);
-        document.getElementById("mensage").innerText += "Carga: " + evt.level + "%; Enchufado: " + evt.isPlugged;
+        document.getElementById("mensage").innerText += "BatteryStatus... \n";
+        document.getElementById("mensage").innerText += "Carga: " + evt.level + "%; Enchufado: " + evt.isPlugged + "\n";
         document.getElementById('container').style.height=evt.level + "%";
         document.getElementsByTagName('h1')[0].innerHTML=evt.level + "%";
         var p = document.querySelector('.received');
@@ -22,7 +23,7 @@ var app = {
     },
     onDeviceReady: function() {
         document.getElementById("mensage").innerText += "arranco...";
-        app.receivedEvent('deviceready');
+        //app.receivedEvent('deviceready');
         window.addEventListener('batterystatus', app.onBatteryStatus, false);
         window.addEventListener('batterycritical', app.onBatteryCritical, false);
     },

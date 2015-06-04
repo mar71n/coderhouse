@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.coderhouse.prueba3" version="1.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>1.0.1 Prueba 3</name>
+<widget id="com.coderhouse.prueba3" version="1.0.5" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+    <name>1.0.5 Bateria</name>
     <description>
         Probando el pluguin de bateria
     </description>
@@ -9,5 +9,5 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
-    <icon src="www/icon.png" />
+    <icon src="www/bateria.png" />
 </widget>
