@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.coderhouse.prueba4" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
-    <name>00 Prueba 4</name>
+    <name>1.0.0 jQuery Mob</name>
     <description>
-        A blank PhoneGap app.
+        Probado jQuery Mobile
     </description>
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
