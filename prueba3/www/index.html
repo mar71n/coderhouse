@@ -4,8 +4,35 @@
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <title>Blank App</title>
+        <style>
+            @viewport{height:device-height}
+            @viewport{width:device-width}
+            html, body {
+                margin:0;
+                padding:0;
+                height: 100%;
+                position: relative;
+                background-color: #DDD;
+            }
+            #container {
+                height: 0%;
+                width: 100%;
+                position: absolute;
+                bottom: 0;
+                background-color: green;
+            }
+            h1 {text-align: center;}
+        </style>
     </head>
     <body>
+        <div id="mensage">
+        </div>
+        <div class="app" id="container">
+        </div>
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
     </body>
 </html>
