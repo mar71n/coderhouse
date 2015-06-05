@@ -9,13 +9,29 @@
     <body>
         <div data-role="page" id="home">
             <div data-role="header">
-            <h1>Encabezado</h1>
+              <h1>Encabezado</h1>
             </div>
             <div data-role="content">
-            Contenido
+              <h3>This is the homescreen of the App</h3>
+              <img src="icon.png">
+              <br />
+              <a href="#otra">Pagina siguiente</a>
             </div>
             <div data-role="footer">
-            Pie
+              Pie
+            </div>
+        </div>
+        <div data-role="page" id="otra">
+            <div data-role="header">
+              <h1>Otro encabezado</h1>
+            </div>
+            <div data-role="content">
+              Mas contenido
+              <br />
+              <a href="#home">Volver a la pagina inicial</a>
+            </div>
+            <div data-role="footer">
+              Otro Pie
             </div>
         </div>
         <script type="text/javascript" src="cordova.js"></script>
