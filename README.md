@@ -78,3 +78,20 @@ cordova-plugin-device 1.0.0 "Device"
 cordova-plugin-whitelist 1.0.0 "Whitelist"
 ```
 
+Configuración manual del proxy en el AVD:
+
+01. Go to Home Screen
+02. Click on Menu
+03. Click on Settings
+04. In Wireless & Networks category, click More…
+05. Click Mobile Networks
+06. Click Access Point Names
+07. Click TelKila
+08. Enter Proxy and Port
+09. Enter Username and Password if required
+
+## Crear proyecto en blanco con jquery-mobile
+
+```
+$ phonegap create prueba8 --id com.coderhouse.prueba8 --name "00 Prueba 8" --template jquery-mobile-starter
+```
