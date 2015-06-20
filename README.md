@@ -89,3 +89,9 @@ Configuración manual del proxy en el AVD:
 07. Click TelKila
 08. Enter Proxy and Port
 09. Enter Username and Password if required
+
+## Crear proyecto en blanco con jquery-mobile
+
+```
+$ phonegap create prueba8 --id com.coderhouse.prueba8 --name "00 Prueba 8" --template jquery-mobile-starter
+```
