@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.coderhouse.prueba8" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>00 Prueba 8</name>
+<widget id="com.coderhouse.prueba8" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>P8 Lista Tareas 1.0</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
