@@ -40,6 +40,8 @@ todo.refresh_list = function() {
             $tasks.append(li);
         }
     }
+    // guardar todo.list en localStorage.todo_list
+    localStorage.listaTareas = JSON.stringify(todo.list);
     // actualizar el listado
     $tasks.listview('refresh');
 };
@@ -48,9 +50,14 @@ todo.refresh_list = function() {
 $('#index').on('pageinit', function() {
     console.log('index.pageinit');
 
+    // si hay algo guardado lo traemos , sino
     // Vaciamos el array al iniciar la pagina
     // esto sucede solo una vez
-    todo.list = [];
+    if(localStorage.listaTareas){
+        todo.list = JSON.parse(localStorage.listaTareas);
+    }else{
+        todo.list = [];
+    }
 
     // Asignamos el metodo todo.add al click de #add
     $('#add').on('click', todo.add);
