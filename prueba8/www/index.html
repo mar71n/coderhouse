@@ -5,16 +5,66 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="lib/jquery.mobile-1.4.5.min.css" />
   <script src="lib/jquery-2.1.1.min.js"></script>
-  <script src="js/app.js"></script>
   <script src="lib/jquery.mobile-1.4.5.min.js"></script>
 </head>
 
 <body>
 
-<div data-role="page">
-  
+<div id="index" data-url="index" data-role="page">
+    <div data-role="header">
+        <h1>Tareas</h1>
+    </div>
+    <div data-role="content">
+        <form id="task-form" method="GET">
+        <div data-role="fieldcontain">
+            <input type="text" name="task" id="task" />
+        </div>
+        <input id="add" type="button" data-icon="plus" value="Agregar" />
+        </form>
+        <br />
+        <ul id="task_list" data-role="listview">
+        <li data-role="list-divider">Pendientes</li>
+        </ul>
+    </div>
+</div>  
+<div id="confirm" data-url="confirm" data-role="page">
+  <div data-role="header">
+    <h1>Finalizar tarea</h1>
+  </div>
+  <div data-role="content">
+    Marcar esta tarea como
+    <br>
+    <a class="remove_task" href="#done" data-role="button" data-icon="delete" data-theme="f">Completada</a>
+    <a class="remove_task" href="#notdone" data-role="button" data-icon="check" data-theme="g">No completada</a>
+    <br>
+    <br>
+    <a href="#index" data-role="button" data-icon="minus">Cancelar</a>
+  </div>
 </div>
-  
-<script src="cordova.js"></script>  
+<div id="done" data-url="done" data-role="page">
+  <div data-role="header">
+    <h1>Tareas</h1>
+  </div>
+  <div data-role="content">
+    Excelente!
+    <br>
+    <br>
+    <a href="#index" data-role="button">Volver</a>
+  </div>
+</div>
+<div id="notdone" data-url="notdone" data-role="page">
+  <div data-role="header">
+    <h1>Tareas</h1>
+  </div>
+  <div data-role="content">
+    Ok...
+    <br>
+    <br>
+    <a href="#index" data-role="button">Volver</a>
+  </div>
+</div>
+<script src="cordova.js"></script>
+<script src="js/app.js"></script>
+<script src="js/todo.js"></script>
 </body>
 </html>
